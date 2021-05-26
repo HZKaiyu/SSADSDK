@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "SSADSDK"
-  spec.version      = "1.1.5"
+  spec.version      = "1.1.6"
   spec.summary      = "HZKaiyu广告sdk"
   spec.homepage     = 'https://github.com/HZKaiyu/SSADSDK'
   spec.license	= { :type => "MIT", :file => "LICENSE" }
@@ -15,8 +15,9 @@ Pod::Spec.new do |spec|
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.static_framework = true
   spec.requires_arc = true
-  spec.frameworks = 'SystemConfiguration', 'CoreTelephony', 'AdSupport', 'CoreLocation', 'CoreMedia', 'UIKit', 'Foundation', 'CFNetwork', 'AVFoundation', 'WebKit'
-  spec.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
+  spec.frameworks = 'SystemConfiguration', 'CoreTelephony', 'AdSupport', 'CoreLocation', 'CoreMedia', 'UIKit', 'Foundation', 'CFNetwork', 'AVFoundation',
+  spec.weak_frameworks = 'WebKit',
+  spec.xcconfig = {'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'}
   spec.dependency 'GDTMobSDK'
   
 end
