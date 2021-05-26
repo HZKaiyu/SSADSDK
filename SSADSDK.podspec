@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
-  spec.name         = 'SSADSDK'
-  spec.version      = '1.1.3'
-  spec.summary      = ' HZKaiyu广告sdk'
+  spec.name         = "SSADSDK"
+  spec.version      = "1.1.4"
+  spec.summary      = "HZKaiyu广告sdk"
   spec.homepage     = 'https://github.com/HZKaiyu/SSADSDK'
-  spec.license	= { :type => 'MIT', :file => 'LICENSE' }
-  spec.author       = { 'Kaiyu' => 'zhanggewangluocn@163.com' }
+  spec.license	= { :type => "MIT", :file => "LICENSE" }
+  spec.author       = { "Kaiyu" => "zhanggewangluocn@163.com" }
   spec.platform     = :ios, '9.0'
-  spec.source       = { :git => 'https://github.com/HZKaiyu/SSADSDK.git', :tag => '#{spec.version}' }
+  spec.source       = { :git => "https://github.com/HZKaiyu/SSADSDK.git", :tag => s.version.to_s }
   spec.vendored_frameworks = 'core/SSADSDK.framework'
   spec.resources = 'core/SSADImages.bundle'
   spec.public_header_files = 'core/SSADSDK.framework/Headers/*h'
@@ -16,6 +16,7 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
   spec.requires_arc = true
   spec.frameworks = 'SystemConfiguration', 'CoreTelephony', 'AdSupport', 'CoreLocation', 'CoreMedia', 'UIKit', 'Foundation', 'CFNetwork', 'AVFoundation', 'WebKit'
+  spec.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
   spec.dependency 'GDTMobSDK'
   
 end
