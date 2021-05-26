@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
   spec.name         = "SSADSDK"
-  spec.version      = "1.1.4"
+  spec.version      = "1.1.5"
   spec.summary      = "HZKaiyu广告sdk"
   spec.homepage     = 'https://github.com/HZKaiyu/SSADSDK'
   spec.license	= { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Kaiyu" => "zhanggewangluocn@163.com" }
   spec.platform     = :ios, '9.0'
-  spec.source       = { :git => "https://github.com/HZKaiyu/SSADSDK.git", :tag => s.version.to_s }
+  spec.source       = { :git => "https://github.com/HZKaiyu/SSADSDK.git", :tag => "#{spec.version}" }
   spec.vendored_frameworks = 'core/SSADSDK.framework'
   spec.resources = 'core/SSADImages.bundle'
   spec.public_header_files = 'core/SSADSDK.framework/Headers/*h'
