@@ -1,0 +1,6 @@
+framework module SSADSDK {
+  umbrella header "SSADSDK.h"
+
+  export *
+  module * { export * }
+}
